@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+        <action>
+            <actionName>run</actionName>
+            <packagings>
+                <packaging>jar</packaging>
+            </packagings>
+            <goals>
+                <goal>process-classes</goal>
+                <goal>org.codehaus.mojo:exec-maven-plugin:3.0.0:exec</goal>
+            </goals>
+            <properties>
+                <exec.args>-classpath %classpath view.Login</exec.args>
+                <exec.executable>java</exec.executable>
+            </properties>
+        </action>
+        <action>
+            <actionName>CUSTOM-download oracle nosql</actionName>
+            <displayName>download oracle nosql</displayName>
+            <goals>
+                <goal>dependency:get</goal>
+                <goal>-DgroupId=com.oracle.cloud.db.kv</goal>
+                <goal>-DartifactId=kv-client</goal>
+                <goal>-Dversion=21.3.2</goal>
+            </goals>
+        </action>
+    </actions>
